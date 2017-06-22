@@ -4,25 +4,6 @@ const http = require('http');
 
 var apiKey='377ddfe85bda0d0d9df020f1a7c0af79';
 
-/*
-http.get('http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID='+apiKey,(res)=>{
-	var data_forecast = '';
-	res.on('data',in_data_forecast=>{
-		data_forecast=data_forecast+in_data_forecast;
-	});
-
-	res.on('end',()=>{
-		var body_forecast = JSON.parse(data_forecast);
-	});
-
-	console.log(body_forecast.list[0].dt_txt);
-	for(i in body_forecast.list[0].main){
-		console.log(i ': 'body_forecast.list[0].main.i);
-	}
-	
-});
-*/
-
 function printMessage(body_weather){
 	console.log('----------------------------'+body_weather.name+'-----------------------------');
 	for(var i in body_weather.main)
@@ -53,5 +34,5 @@ locations.forEach(location=>{
   findWeather(location);
 });
 
-//findWeather();
+
 
