@@ -1,8 +1,7 @@
-//377ddfe85bda0d0d9df020f1a7c0af79 : API key
 
 const http = require('http');
 
-var apiKey='377ddfe85bda0d0d9df020f1a7c0af79';
+var apiKey='';//Insert your API key in the single quotes to run the script successfully
 
 function printMessage(body_weather){
 	console.log('----------------------------'+body_weather.name+'-----------------------------');
